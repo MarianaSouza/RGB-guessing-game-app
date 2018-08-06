@@ -8,7 +8,12 @@ var colors = [
 ]
 
 var squares = document.querySelectorAll(".square");
+var pickedColor = colors[3];
+//Displaying the content of pickedColor on the ID colorDisplay
+var colorDisplay = document.getElementById("colorDisplay");
+colorDisplay.textContent = pickedColor;
 
 for(var i = 0; i < squares.length; i++){
+	//Addding Initial Color to Squares
 	squares[i].style.backgroundColor = colors[i];
 }

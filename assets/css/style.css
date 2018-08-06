@@ -2,6 +2,10 @@ body{
  background-color: #232323;
 }
 
+h1{
+	color: #fff;
+}
+
 .square{
 	background-color: red;
 	height: 300px;
