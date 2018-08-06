@@ -16,4 +16,16 @@ colorDisplay.textContent = pickedColor;
 for(var i = 0; i < squares.length; i++){
 	//Addding Initial Color to Squares
 	squares[i].style.backgroundColor = colors[i];
+
+	//Adding Click Listeners to Squares
+	squares[i].addEventListener("click" , function() {
+		//grab color od the square
+		var clickedColor = (this.style.backgroundColor);
+		//and compare color with pickedColor
+		if(clickedColor === pickedColor){
+			alert("Right");
+		}else{
+			alert("Wrong");
+		}
+	});
 }
