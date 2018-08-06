@@ -1,3 +1,5 @@
+
+//var colors is an array that contains all colors generated dynamically by the function generateRandomColors
 var colors = generateRandomColors(6);
 
 var squares = document.querySelectorAll(".square");
@@ -5,6 +7,8 @@ var pickedColor = pickRandomColor();
 //Displaying the content of pickedColor on the ID colorDisplay
 var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
+
+var header = document.querySelector("header");
 //Message that will be displayed to guide the user
 var messageDisplay = document.querySelector("#message");
 
@@ -20,6 +24,7 @@ for(var i = 0; i < squares.length; i++){
 		if(clickedColor === pickedColor){
 			messageDisplay.textContent = "Correct!";
 			changeColors(clickedColor);
+			header.style.backgroundColor = clickedColor;
 		}else{
 			this.style.backgroundColor = "#232323";
 			messageDisplay.textContent = "Try Again";
@@ -33,7 +38,6 @@ function changeColors(color){
 	for(var i = 0; i < squares.length; i++){
 		//Change each color to match given color
 		squares[i].style.backgroundColor = color;
-
 	}
 }
 
@@ -41,7 +45,6 @@ function changeColors(color){
 function pickRandomColor(){
 	var random = Math.floor(Math.random() * colors.length);
 	return colors[random];
-
 }
 
 //This function generate the amount of RGB code colors for the array colors

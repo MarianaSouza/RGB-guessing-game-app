@@ -4,8 +4,13 @@ body{
 
 h1{
 	color: #fff;
+	text-align: center;
 }
-
+.hint-text{
+	color: #c0c0c0;
+	font-size: 18px;
+	text-align: center;
+}
 span{
 	color: #fff;
 }
