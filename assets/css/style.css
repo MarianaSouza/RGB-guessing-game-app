@@ -1,0 +1,26 @@
+body{
+ background-color: #232323;
+}
+
+.square{
+	background-color: red;
+	height: 300px;
+	margin: 20px 0;
+}
+
+@media only screen and (max-width: 600px){
+	.square{
+		width: 80px;
+		height: 80px;
+		margin: 20px auto;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px){
+	.square{
+		width: 170px;
+		height: 170px;
+		margin: 20px auto;
+	}
+}
+
