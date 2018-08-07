@@ -1,4 +1,3 @@
-
 //var colors is an array that contains all colors generated dynamically by the function generateRandomColors
 var colors = generateRandomColors(6);
 
@@ -9,6 +8,28 @@ var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 
 var header = document.querySelector("header");
+
+var resetButton = document.querySelector("#reset");
+
+reset.addEventListener("click" , function(){
+	//reseting background header colors
+	header.style.backgroundColor = "#232323";
+	//generating all new colors
+	colors = generateRandomColors(6);
+
+	//it picks a new random color from array colors
+	 pickedColor = pickRandomColor();
+
+	//change color displayed to match picked color
+	colorDisplay.textContent = pickedColor;
+
+	//change colors of the squares
+	 for(var i = 0; i < squares.length; i++){
+	 	squares[i].style.backgroundColor = colors[i];
+	 }
+
+});
+
 //Message that will be displayed to guide the user
 var messageDisplay = document.querySelector("#message");
 
@@ -23,6 +44,7 @@ for(var i = 0; i < squares.length; i++){
 		//and compare color with pickedColor
 		if(clickedColor === pickedColor){
 			messageDisplay.textContent = "Correct!";
+			resetButton.textContent = "Play again?"
 			changeColors(clickedColor);
 			header.style.backgroundColor = clickedColor;
 		}else{
@@ -70,3 +92,5 @@ var rgb = "rgb(" + red + ", " + blue + ", " + green + ")";
 
 return rgb;
 }
+
+//Function that restarts the game
