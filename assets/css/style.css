@@ -12,13 +12,13 @@ h1{
 	text-align: center;
 }
 .hint-text{
-	color: #c0c0c0;
+	color: #f5f5f5;
 	font-size: 18px;
 	text-align: center;
 }
 
 #colorDisplay{
-	font-size: 1.2em;
+	font-size: 1.4em;
 	font-weight: 500;
 }
 
@@ -35,11 +35,23 @@ h1{
 	margin: 20px 0;
 }
 
+.selected{
+	background-color: #888;
+	
+}
+
 @media only screen and (max-width: 600px){
 	.square{
 		width: 80px;
 		height: 80px;
 		margin: 20px auto;
+	}
+
+	h1{
+		font-size: 25px;
+	}
+	#colorDisplay{
+		font-size: 1.2em;
 	}
 }
 
