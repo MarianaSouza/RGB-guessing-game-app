@@ -65,6 +65,7 @@ button{
 	font-weight: 700;
 	letter-spacing: 1px;
 	font-size: inherit;
+	outline: none;
 	-moz-transition: all 0.3s; /* Mozila */
 	-webkit-transition: all 0.3s; /* Safari */
     transition: all 0.3s;

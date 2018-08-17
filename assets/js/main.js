@@ -16,9 +16,15 @@ var resetButton = document.querySelector("#reset");
 var easyButton = document.querySelector("#easy");
 var hardButton = document.querySelector("#hard");
 
-reset.addEventListener("click" , function(){
+resetButton.addEventListener("click" , function(){
 	//reseting background header colors
 	header.style.backgroundColor = "#232323";
+
+	//changing the message of the button reset
+	this.textContent = "New Colors";
+
+	//cleaning message "Correct" on span
+	messageDisplay.textContent = "";
 
 	//generating all new colors
 	colors = generateRandomColors(numOfSquares);
@@ -35,7 +41,7 @@ reset.addEventListener("click" , function(){
 	 }
 });
 
-easy.addEventListener("click" , function(){
+easyButton.addEventListener("click" , function(){
 	easyButton.classList.add("selected");
 	hardButton.classList.remove("selected");
 
@@ -66,7 +72,7 @@ easy.addEventListener("click" , function(){
 
 });
 
-hard.addEventListener("click" , function(){
+hardButton.addEventListener("click" , function(){
 	hardButton.classList.add("selected");
 	easyButton.classList.remove("selected");
 
