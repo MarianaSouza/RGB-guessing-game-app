@@ -39,7 +39,12 @@ function init(){
 
 	}
 
-	//Square listeners
+	squareListeners();
+
+	reset();
+}
+
+function squareListeners(){
 	for(var i = 0; i < squares.length; i++){
 		//Adding Click Listeners to Squares
 		squares[i].addEventListener("click" , function() {
@@ -57,9 +62,6 @@ function init(){
 			}
 		});
 	}
-
-	reset();
-
 }
 
 function reset(){
